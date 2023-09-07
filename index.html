@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo for "Speaker-independent bone-conducted speech enhancement using SiGAN"</title>
+</div>
+</head>
+
+<body>
+    <script type="text/javascript" src="/xlIsAnK1Ny52/Gx56ae5/ce06a9" r="m"></script>
+    <h2 align="center"> Demo for "Speaker-independent bone-conducted speech enhancement using SiGAN"</h2>
+    <div align="center"><b>Authors:</b> Liangliang Cheng, Jian Zhou, Liang Tao, and Hon Keung Kwan</div>&nbsp;
+    <div><b>Abstract:</b> 
+Compared to air-conducted (AC) speech, bone-conducted (BC) speech is free from environmental noise and 
+thus can be used as an alternative for human-computer interaction. Unfortunately, the quality and 
+intelligibility of bone-conducted speech are much lower than those of air-conducted speech due to 
+the significant attenuation of high-frequency components from the low-pass filtering effect of the 
+human tissue. This paper proposes a speaker-independent generative adversarial network for 
+speaker-independent bone-conducted speech enhancement (SiGAN-BCSE). Specifically, a novel SiGAN 
+is proposed for learning the nonlinear spectral mapping from BC speech to clean AC speech using an 
+unpaired and unaligned parallel speech corpus as training data. By exploiting the cross-domain spectra 
+similarity and semantic invariance between BC speech and AC speech, the proposed SiGAN can produce an 
+accurate spectrum of AC speech for BC speech. Unlike existing methods that are specific-speaker oriented, 
+the proposed SiGAN-BCSE is speaker-independent since it can be trained with training data comprising multiple 
+speakers and can estimate clean AC speech for seen or unseen speakers. Compared with the speech quality and 
+intelligibility of existing state-of-the-art methods, the SiGAN-BCSE gains 5.66%, 6.85%, and 11.70% of 
+speech quality improvements and 7.69%, 8.53%, and 9.09% of speech intelligibility improvements 
+on AEUCHSAC&BC-2017, TMHINT, and TMBCS datasets, respectively. In particular, the proposed SiGAN-BCSE 
+obtains a similar performance for the unseen speaker as that of the seen speakers on the TMHINT dataset, 
+indicating that the SiGAN-BCSE is speaker-independent. </div>
+	
+	
+	<p>&nbsp;</p>
+	<hr>
+    <h4>AC speech, BC speech and Enhanced BC speech by different methods[GMM, BLSTM, CycleGAN, CycleGAN-DAL, StarGAN, SiGAN(Ours)] on different datasets</h4>
+    <table border="1">
+	    
+        <tr>
+		    <th> </th>
+		    <th>1.wav</th>
+			<th>2.wav</th>
+            <th>3.wav</th>
+            <th>4.wav</th>
+            <th>5.wav</th>
+        </tr>
+		 <tr>
+		    <td align="center">Text</td>
+			<td align="center">他行迹败露后躲至当地无底洞</td>
+			<td align="center">尽管那封信看起来是如此情真意切</td>
+			<td align="center">市场热度已较二季度有所下降</td>
+			<td align="center">货币政策的基本取向没有改变</td>
+			<td align="center">当事人应当停止有关交易和活动</td>
+			
+			
+        </tr>
+        <tr>
+		    <td align="center"><span>BC</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\BC\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\BC\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\BC\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\BC\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\BC\BC2.wav"></audio></td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>AC</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\AC\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\AC\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\AC\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\AC\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\AC\AC2.wav"></audio></td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>GMM</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\GMM\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\GMM\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\GMM\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\GMM\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\GMM\GMM2.wav"></audio></td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>BLSTM</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\BLSTM\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\BLSTM\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\BLSTM\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\BLSTM\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\BLSTM\BLSTM2.wav"></audio></td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>CycleGAN</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\CycleGAN\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\CycleGAN\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\CycleGAN\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\CycleGAN\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\CycleGAN\CycleGAN2.wav"></audio></td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>CycleGAN-DAL</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\CycleGANDAL\168.wav"></audio><br>他急击败退后躲至张继祖比重</td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\CycleGANDAL\171.wav"></audio><br>尽管那增进看起来是如此情真意切</td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\CycleGANDAL\174.wav"></audio><br>客场热度也较二季度有所下降</td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\CycleGANDAL\175.wav"></audio><br>货币政策的继承取向没有改变</td>
+            <td><audio controls><source src=".\speech\CycleGANDAL\CycleGANDAL2.wav"></audio><br>当事人应当总结有关交易和活动</td>
+			
+        </tr>
+		<tr>
+		    <td align="center"><span>StarGAN</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\StarGAN\168.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\StarGAN\171.wav"></audio></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\StarGAN\174.wav"></audio></td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\StarGAN\175.wav"></audio></td>
+            <td><audio controls><source src=".\speech\StarGAN\StarGAN2.wav"></audio></td>
+			
+        </tr>
+				<tr>
+		    <td align="center"><span>SiGAN(ours)</span></td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\SiGAN\168.wav"></audio><br>他行迹败露后躲至张地无底洞</td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\SiGAN\171.wav"></audio><br>尽管那封信看起来是如此情真意切</td>
+			<td><audio controls><source src=".\speech\TMHINTDEMO\SiGAN\174.wav"></audio><br>市场热度也较二季度有所下降</td>
+            <td><audio controls><source src=".\speech\TMHINTDEMO\SiGAN\175.wav"></audio><br>货币政策的基准取向没有改变</td>
+            <td><audio controls><source src=".\speech\SiGAN\SiGAN2.wav"></audio><br>当事人应当停止有关交易和活动</td>
+			
+        </tr>
+		
+    </table>
+	
+    <p>&nbsp;</p>
+	<hr>
+    <h4>BC speech enhancement using SiGAN for unseen and seen speaker.</h4>
+    <table border="1">
+        <tr>
+            <th>&nbsp;</th>
+		    <th>1.wav</th>
+			<th>2.wav</th>
+            <th>3.wav</th>
+            <th>4.wav</th>
+            <th>5.wav</th>
+        </tr>
+		 <tr>
+		    <td align="center">Text</td>
+			<td align="center">那个老奶奶心地很善良</td>
+			<td align="center">他发现钢笔没有墨水了</td>
+			<td align="center">他喜欢跟孩子们一起玩</td>
+			<td align="center">我替他向老师请了病假</td>
+			<td align="center">他最近好像有什么心事</td>
+			
+        </tr>
+        <tr>
+		    <td align="center"><span>BC</span></td>
+            <td><audio controls><source src=".\speech\BCX\BC1.wav"></audio></td>
+            <td><audio controls><source src=".\speech\BCX\BC2.wav"></audio></td>
+			<td><audio controls><source src=".\speech\BCX\BC3.wav"></audio></td>
+            <td><audio controls><source src=".\speech\BCX\BC4.wav"></audio></td>
+			<td><audio controls><source src=".\speech\BCX\BC5.wav"></audio></td>
+        </tr>
+		<tr>
+		    <td align="center"><span>AC</span></td>
+            <td><audio controls><source src=".\speech\ACX\AC1.wav"></audio></td>
+            <td><audio controls><source src=".\speech\ACX\AC2.wav"></audio></td>
+			<td><audio controls><source src=".\speech\ACX\AC3.wav"></audio></td>
+            <td><audio controls><source src=".\speech\ACX\AC4.wav"></audio></td>
+			<td><audio controls><source src=".\speech\ACX\AC5.wav"></audio></td>
+        </tr>
+		<tr>
+		    <td align="center"><span>SIGAN(unseen speaker)</span></td>
+            <td><audio controls><source src=".\speech\unseen\061317.wav"></audio></td>
+            <td><audio controls><source src=".\speech\unseen\061318.wav"></audio></td>
+			<td><audio controls><source src=".\speech\unseen\061319.wav"></audio></td>
+            <td><audio controls><source src=".\speech\unseen\061320.wav"></audio></td>
+			<td><audio controls><source src=".\speech\unseen\061401.wav"></audio></td>
+        </tr>
+		<tr>
+		    <td align="center"><span>SIGAN(seen speaker)</span></td>
+            <td><audio controls><source src=".\speech\seen\061317.wav"></audio></td>
+            <td><audio controls><source src=".\speech\seen\061318.wav"></audio></td>
+			<td><audio controls><source src=".\speech\seen\061319.wav"></audio></td>
+            <td><audio controls><source src=".\speech\seen\061320.wav"></audio></td>
+			<td><audio controls><source src=".\speech\seen\061401.wav"></audio></td>
+        </tr>
+    </table>
+   <!-- <blockquote>
+		
+		<p>&nbsp;</p>
+        <table>
+            <tr>
+                <td colspan=2><span>(1). 1001.wav.</span></td>
+            </tr>
+			
+			<tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\BC1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src=".\speech\AC\AC1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src=".\speech\GMM\GMM1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src=".\speech\BLSTM\BLSTM1.wav"></audio>
+                </td>
+             </tr>
+	   
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\CycleGAN1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                        <source src=".\speech\CycleGAN-DAL\CycleGANDAL1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\StarGAN1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN\SIGAN1.wav"></audio>
+                </td>
+           </tr>
+		</table>
+		
+		<p>&nbsp;</p>
+		<table>
+			<tr>
+                <td colspan=2><span>(2). 2001.wav.</span></td>
+            </tr>
+			
+			<tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\BCm1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src=".\speech\AC\ACm1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src=".\speech\GMM\GMMm1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src=".\speech\BLSTM\BLSTMm1.wav"></audio>
+            </tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\CycleGANm1.wav"></audio>
+                </td>
+                <td>
+                   <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                       <source src=".\speech\CycleGANDAL\CycleGANDALm1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\StarGANm1.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN\SIGANm1.wav"></audio>
+                </td>
+		</table>
+			
+		<p>&nbsp;</p>
+		<table>
+			 <tr>
+                <td colspan=2><span>(3). 3001.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div> <audio controls>
+                        <source src=".\speech\AC\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div> <audio controls>
+                        <source src=".\speech\GMM\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div> <audio controls>
+                        <source src=".\speech\BLSTM\05.wav"></audio>
+                </td>
+            
+                  </tr>
+                  <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                        <source src=".\speech\CycleGAN-DAL\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\05.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN-BCSE\05.wav"></audio>
+                </td>
+		</table>
+		
+		<p>&nbsp;</p>
+		<table>	
+			 <tr>
+                <td colspan=2><span>(4). 4001.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div> <audio controls>
+                        <source src=".\speech\AC\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div> <audio controls>
+                        <source src=".\speech\GMM\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div> <audio controls>
+                        <source src=".\speech\BLSTM\06.wav"></audio>
+                </td>
+                   </tr>
+                  <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                        <source src=".\speech\CycleGAN-DAL\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\06.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN-BCSE\06.wav"></audio>
+                </td>
+		</table>
+		
+		<p>&nbsp;</p>
+		<table>
+			<tr>
+                <td colspan=2><span>(5). 5001.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\1701.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src=".\speech\AC\1701.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src=".\speech\GMM\1701.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src=".\speech\BLSTM\1701.wav"></audio>
+                </tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\1701.wav"></audio>
+                </td>
+                <td>
+                   <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                       <source src=".\speech\CycleGAN-DAL\1701.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\1701.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN-BCSE\1701.wav"></audio>
+                </td>
+		</table>
+		
+		<p>&nbsp;</p>
+		<table>	
+			 <tr>
+                <td colspan=2><span>(6). 6001.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src=".\speech\BC\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div> <audio controls>
+                        <source src=".\speech\AC\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div> <audio controls>
+                        <source src=".\speech\GMM\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div> <audio controls>
+                        <source src=".\speech\BLSTM\1000.wav"></audio>
+                </td>
+            
+                    </tr>
+                  <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src=".\speech\CycleGAN\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                        <source src=".\speech\CycleGAN-DAL\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">G</div><audio controls>
+                        <source src=".\speech\StarGAN\1000.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">H</div><audio controls>
+                        <source src=".\speech\SIGAN-BCSE\1000.wav"></audio>
+                </td>    
+        </table>
+		
+    </blockquote>-->
+
+</body>
+
+</html>

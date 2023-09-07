@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>ISIPLAB PAPERS</title>
+
+    <meta property="og:title" content="ISIPLAB">
+    <meta property="og:locale" content="en_US">
+
+
+    <link rel="preload" href="./Paper And Demo/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="./Paper And Demo/style.css">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9; IE=8; IE=7; IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="./Paper And Demo/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="/js/jquery-1.11.1.min.js"></script>
+
+    -->
+    <script src="./Paper And Demo/jquery-3.0.0.min.js"></script>
+
+    <!-- Custom Theme files -->
+    <link href="./Paper And Demo/style2.css" rel="stylesheet" type="text/css">
+    <!-- Custom Theme files -->
+    <!-- dropdown -->
+    <script src="./Paper And Demo/jquery.easydropdown.js"></script>
+    <link href="./Paper And Demo/nav.css" rel="stylesheet" type="text/css" media="all">
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="./Paper And Demo/move-top.js"></script>
+    <script type="text/javascript" src="./Paper And Demo/easing.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+
+    </script>
+    <!-- end-smoth-scrolling -->
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script charset="utf-8" src="chrome-extension://pngicgippofneelinabebobnkpmdiphn/js/btype.js"></script>
+    <script type="text/javascript" charset="utf-8"
+            src="chrome-extension://pngicgippofneelinabebobnkpmdiphn/js/chrome.js"></script>
+</head>
+<body>
+<!-- Header Starts Here -->
+<div class="banner">
+
+    <div class="header">
+
+        <div class="container">
+
+            <h1 style="color:white;",class="project-tagline">ISIPLAB</h1>
+            <span class="menu">菜单</span>
+
+            <div class="banner-top">
+                <ul class="nav banner-nav">
+                    <li><a href="index.html" class="active1">Home</a></li>
+<!--                    <li class="dropdown1"><a href="paper">About ISIPLAB</a></li>-->
+                    <li class="dropdown1"><a href="papers.html">Papers</a></li>
+                    <li class="dropdown1"><a href="corpus.html">Corpus</a></li>
+                    <li class="dropdown1"><a href="http://isiplab.ahu.edu.cn:8080">Online Latex</a></li>
+                    <li class="dropdown1"><a href="http://isiplab.ahu.edu.cn:9000">Knowledge System</a></li>
+                </ul>
+                <script>
+                $("span.menu").click(function () {
+                    $(" ul.nav").slideToggle("slow", function () {
+                    });
+                });
+
+                $(document).ready(function () {
+                    //根据URL使得对于的MENU选中
+                    var currentUrl = window.location.pathname;
+                    var $aside = $(".banner-nav");
+                    var $a = $aside.find("a[href='" + currentUrl + "']");
+                    $a.attr("class", "active");
+                });
+
+                </script>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<main id="content" class="main-content" role="main">
+
+	<h4>Paper List</h4>
+	<ol>
+	     <li><p>
+			Cheng,L.L.,Zhou,J.,Wang,HB,Tao,L.,Kwan,HK.(2022):Speaker-independent bone-conducted speech enhancement using SiGAN, <i>Transactions on Audio,Speech and Language Processing</i>, (submitted).	
+			<a href="">[paper]</a> <a href="SIGAN-BCSE/index.html">[demo]</a> <a href="MSFFT/code.zip">[code]</a></p>
+		</li>
+		
+		<li><p>
+			Xu,Y.H.,Zhou,J.,Wang,HB.,Tao,L.,Kwan,HK.(2022):Multi-Scale Feature Fusion Transformer Network for End-to-End Single Channel Speech Separation, <i>Transactions on Audio,Speech and Language Processing</i>, (submitted).	
+			<a href="">[paper]</a> <a href="MSFFT/index.html">[demo]</a> <a href="MSFFT/code.zip">[code]</a></p>
+		</li>
+
+		<li><p>
+			Jia,R.,Zhou,J.,Wang,HB,Tao,L.,Kwan,HK.(2022):Replay Attack Detection Based on Raw Waveform and Sinc Filter. <i>Speech Communication</i>. (submitted).
+			<a href="">[paper]</a> <a href="JR/code_replay_attack_detection.rar">[code]</a></p>
+		</li>
+		 	 
+		<li><p>
+		    Gao,T.,Zhou,J.,Wang,HB,Tao,L.,Kwan,HK.:A Novel Attention-Guided Generative Adversarial Network for Whisper-to-Normal Speech Conversion. <i>Cognitive Computation</i>.(Accepted) 
+			<a href="">[paper]</a>  <a href="GT/index.html">[demo]</a> <a href="GT/Whisper_to_Normal.zip">[code]</a></p>
+		</li>
+		 
+		<li><p>
+		    Pan,Q., Pan,Y., Zhou,J. Tao,L.,Kwan,HK.(2022):CycleGAN with Dual Adversarial Loss for Bone-Conducted Speech Enhancement. <i>TENCON2022</i>.    
+			<a href="https://arxiv.org/abs/2111.01430">[paper]</a>  <a href="PQ/demo.html">[demo]</a> <a href="">[code]</a><a href="PQ/slide.pdf">[slide]</a></p>	
+		</li>
+		 
+		<li>
+		    Yu,W.,Zhou,J., et al. (2021):SETransformer:Transformer Speech enhancement. <i>Cognitive Computation, 2021</i>.
+			<a href="https://www.researchgate.net/publication/349006945_SETransformer_Speech_Enhancement_Transformer">[paper]</a> <a href="YWW/index.html">[demo]</a></p>
+		</li>
+		 
+		<li><p>
+			Wang,H,Cheng,R., Zhou,J., et al. (2021):Multistage Model for Robust Face Alignment using Deep Neural Networks. <i>Cognitive Computation, 2021.</i>
+			<a href="https://arxiv.org/abs/2002.01075">[paper]</a> <a href="MSM-face-alignment_files/MSM-face-alignment.html">[demo]</a> <a href="">[code]</a></p>
+		</li>
+		 
+		<li><p>
+			连海伦,周健,胡雨婷,郑文明(2020):利用深度卷积神经网络将耳语转换为正常语音. <i>声学学报, 2020.</i></p>
+		</li>
+		
+		<li><p>
+			Huang,Y.,Zhou,J., et al.(2019):An End to End Method of Whisper Enhancement. <i>2019 IEEE International Conference on Information Communication and Signal Processing (ICICSP)</i>
+			<a href="https://www.researchgate.net/publication/338651659_An_End_to_End_Method_of_Whisper_Enhancement">[paper]</a> <a href="DCNNdemo/dcnn.html">[demo]</a> <a href="">[code]</a></p>	
+		</li>
+		 
+		 
+		<li><p>
+		    Lian,H.,Zhou,J., et al.(2019):Whisper to Normal Speech Conversion Using Sequence-to-Sequence Mapping Model with Auditory Attention. <i>IEEE ACCESS,2019.</i>
+			<a href="https://www.researchgate.net/publication/335783077_Whisper_to_Normal_Speech_Conversion_Using_Sequence-to-Sequence_Mapping_Model_With_Auditory_Attention ">[paper]</a> <a href="lhl/index.html">[demo]</a></p>
+		</li>
+		 
+		<li><p>
+			Zhou,J.,Hu,Y., et al.(2019):Multimodal Voice Conversion Using a Deep Convolutional Neural Network in an Adverse Environment. <i>IEEE ACCESS,2019.</i>
+			<a href="">[paper]</a>  <a href="hyt/index.html">[demo]</a> <a href="">[code]</a></p>		 
+		</li>
+		 
+		<li><p>
+			周健,刘荣敏,窦云峰,路成,陶亮.(2018):采用L1/2稀疏约束的梅尔倒谱系数语音重建方法. <i>声学学报,2018,vol.6.</i></p>
+		</li> 
+
+		<li><p>
+			周健,窦云峰,刘荣敏,王华彬,陶亮.(2018):采用低维特征映射的耳语音向正常音转换. <i>声学学报,2018,vol.5.</i></p>
+		</li>		
+				 
+		<li><p>
+		    Zhou,J., et al.(2017):A Sparse Analysis Window for Discrete Gabor Transform. <i>Circuits,Systems and Signal Processing, 2017.</i>
+			<a href="https://xueshu.baidu.com/usercenter/paper/show?paperid=bf10a09d478846ffeb6090b0fcbd8f5b">[paper]</a></p>
+		 </li> 
+		 
+		<li><p>
+		    路成, 田猛, 周健.(2017): L1/2稀疏约束卷积非负矩阵分解的单通道语音增强方法. <i>声学学报, 2017.</i></p>
+		</li>
+		 
+		<li><p>
+		    路成, 周健.(2017):正交投影非负矩阵的交替方向乘子分解方法. <i>中国图象图形学报，2017.</i></p>
+		</li>
+		 
+		<li><p>
+		    田猛,路成,周健,施汉琴,陶亮.(2017):采用稀疏和平滑双约束的增量正交映射非负矩阵分解目标跟踪. <i>计算机辅助设计与图形学学报 2017.vol.11.</i></p>
+	    </li>
+	 
+		<li><p>
+		    田猛,路成,周健.(2016):联合模板先验概率和稀疏表示的目标跟踪.<i>中国图象图形学报,2016,21(11):1455-1463.</i></p>
+		</li>
+		
+		<li><p>
+			 梁瑞宇,周健,王青云.(2015):仿人耳听觉的助听器双耳声源定位算法. <i>声学学报,2015,40(3):446-454.</i></p>
+		</li>
+		 
+		<li><p>
+		     张倩敏,周健.(2015):非对称代价函数的稀疏卷积非负矩阵分解方法. <i>信号处理，2015.</i></p>
+		</li>
+		
+		<li><p>
+			Zhou,J., Liang,R.,et al.(2013):Unsupervised Learning of phonemes of whispered speech in a noisy environment based on convolutive non-negative matrix factorization. <i>Information Sciences, 2015.</i>
+			<a href="https://www.researchgate.net/publication/259089964_Unsupervised_learning_of_phonemes_of_whispered_speech_in_a_noisy_environment_based_on_convolutive_non-negative_matrix_factorization">
+		    [paper]
+			</a></p>
+		</li>
+		
+		<li><p>
+			Zhou,J.,Liang,R., et al.(2012):Whisper Intelligibility Enhancement Using a Supervised Learning Approach. <i>Circuits,Systems and Signal Processings, 2012.</i>
+			<a href="https://www.researchgate.net/publication/257319452_Whisper_Intelligibility_Enhancement_Using_a_Supervised_Learning_Approach">
+		    [paper]
+			</a></p>
+		</li>
+		
+	</ol>  
+
+
+
+
+    <footer class="site-footer">
+
+
+    </footer>
+</main>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+
+</script>
+<!-- //here ends scrolling icon -->
+
+<audio controls="controls" style="display: none;"></audio>
+<a href="http://isiplab.ahu.edu.cn/#" id="toTop" style="display:block;">To Top</a>
+
+</body>
+<style type="text/css">
+    #yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}
+</style>
+</html>
